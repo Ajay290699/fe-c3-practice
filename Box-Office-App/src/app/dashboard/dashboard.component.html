@@ -1,0 +1,17 @@
+<h2>{{title}}</h2>
+
+<div id="div1">
+    <div class="search-box" id="div">
+        <input type="text" id="searchBox" placeholder="Search Note" [(ngModel)]="searchText"/>
+        <button (click)="search()" id="go" type="button">Go</button>
+        <button (click)="reset()" id="clear" type="button">Clear</button>
+     </div>
+</div>​
+
+<div class="card" *ngFor="let movie of Movies">
+    <img id="poster" src="../../assets/Images/{{movie.movieTitle}}.jpg" alt="" width="330px" height="200px">
+    <div id="content">
+       <img id="star" src="../../assets/Images/rating.jpg" alt=""><span>{{movie.rating}}</span><br>
+       <span>{{movie.movieTitle}}         {{movie.genre}}        {{movie?.yearOfRelease}} </span>
+    </div>
+</div>
